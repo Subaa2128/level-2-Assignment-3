@@ -5,14 +5,18 @@
           box-sizing: border-box;
 }
 
-.bookStore {
+.books {
+  margin-top: 40%;
+}
+
+.books .bookStore {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
 }
 
-.bookStore img {
+.books .bookStore img {
   width: 150px;
   height: 200px;
 }

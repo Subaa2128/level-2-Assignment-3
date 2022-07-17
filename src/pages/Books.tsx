@@ -30,13 +30,13 @@ const Books: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="books">
       <h1>Books</h1>
       <div className="bookStore">
         {items.map((pro) => {
           return (
             <div>
-              <div>
+              <div className="books_items">
                 <div key={pro._id}>
                   <h2>{pro.title}</h2>
                   <img src={pro.image} alt="" />

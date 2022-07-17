@@ -67,9 +67,43 @@
   cursor: pointer;
   background: #383838;
   color: #fff;
-  text-transform: capitalize;
   font-size: 15px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.navbar_one .logo .nav_items Link {
+  margin-left: 20px;
+}
+
+.navbar_one .logo .nav_items Link img {
+  width: 30px;
+}
+
+.navbar_one .links_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 10vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  border-top: 1px solid #d1d1d1;
+}
+
+.navbar_one .links_container .link {
+  padding: 0 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #383838;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar_one .links_container .link:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=Navbar.css.map */
