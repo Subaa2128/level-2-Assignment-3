@@ -6,18 +6,71 @@
 }
 
 .books {
-  margin-top: 40%;
+  padding: 50px;
 }
 
-.books .bookStore {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+.books .bookStore .books_items {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid grey;
 }
 
-.books .bookStore img {
+.books .bookStore .books_items img {
   width: 150px;
   height: 200px;
+  margin-top: 0px;
+}
+
+.books .bookStore .books_items h2 {
+  font-size: 19px;
+  width: 160px;
+  margin-top: 8px;
+  font-family: sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+}
+
+.books .bookStore .books_items h4 {
+  margin-top: 4px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.books .bookStore .books_items p {
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  margin-bottom: 8px;
+}
+
+.books .bookStore .books_items .edit_btn {
+  padding: 5px;
+}
+
+.books .bookStore .books_items .edit_btn button {
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  background: #ff5403;
+  color: #fff;
+}
+
+.books .bookStore .books_items h3 {
+  color: #ff5403;
+  font-size: 19px;
+  font-family: sans-serif;
+  width: 190px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  margin-top: 8px;
 }
 /*# sourceMappingURL=Books.css.map */

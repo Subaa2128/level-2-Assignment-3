@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Cart_main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  padding: 50px;
+  gap: 30px;
+}
+
+.Cart_main .Cart_contant {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #dccbcb;
+}
+
+.Cart_main .Cart_contant img {
+  width: 180px;
+  height: 250px;
+}
+
+.Cart_main .Cart_contant h2 {
+  font-size: 17px;
+  width: 72%;
+  margin-top: 8px;
+  font-family: sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+}
+
+.Cart_main .Cart_contant h4 {
+  margin-top: 4px;
+  font-size: 25px;
+  margin-left: -30px;
+}
+
+.Cart_main .Cart_contant .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.Cart_main .Cart_contant .btns .like_btn button,
+.Cart_main .Cart_contant .btns .delete_btn button {
+  background: #ff5403;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=Cart.css.map */

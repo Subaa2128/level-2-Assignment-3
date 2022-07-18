@@ -7,7 +7,7 @@ const SignUp: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleCraetePost = async () => {
+  const handleCreatePost = async () => {
     try {
       const { data } = await axios.post("http://localhost:5000/users/singnup", {
         name: name,
@@ -47,7 +47,7 @@ const SignUp: React.FC = () => {
         />
       </div>
       <div>
-        <button onClick={() => handleCraetePost()}>Create</button>
+        <button onClick={() => handleCreatePost()}>Create</button>
       </div>
     </div>
   );
