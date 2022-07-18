@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.book-grid {
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  img {
+    width: 150px;
+  }
+  .book-button-flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .cart-button {
+    width: 80%;
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.book-grid {
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+}
+.book-grid img {
+  width: 150px;
+}
+.book-grid .book-button-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.book-grid .cart-button {
+  width: 80%;
+}/*# sourceMappingURL=bookFilter.css.map */

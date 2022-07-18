@@ -1,0 +1,65 @@
+@import "colorMixin";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.book-slider {
+  .slider-book {
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+    }
+  }
+}
+.slider {
+  margin: 60px;
+  img {
+    border-radius: 50%;
+    width: 60%;
+    height: 30vh;
+    object-fit: cover;
+    border: 2px solid $main-color;
+  }
+  h3 {
+    margin-left: 30px;
+    color: $main-color;
+  }
+}
+
+.poster {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border: 6px solid black;
+}
+
+.tamil-poster {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border: 6px solid green;
+  margin-top: 20px;
+}
+.romance-poster {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border: 6px solid brown;
+  margin-top: 20px;
+}
+
+.poster-image {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.book-grid {
+  img {
+    width: 90%;
+  }
+}
