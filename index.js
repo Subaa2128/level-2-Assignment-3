@@ -14,6 +14,8 @@ app.use(express.json({ limit: "10mb" }));
 app.use("/books", booksRoutes);
 app.use("/users", usersRoutes);
 
+app.get("/", (req, res) => res.send("hello"));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

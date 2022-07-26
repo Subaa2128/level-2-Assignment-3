@@ -9,9 +9,9 @@ import {
 
 const routes = express.Router();
 
-routes.post("/CreateBook", CreateBook);
-routes.get("/getBook", getBook);
-routes.get("/bookGet/:id", bookGet);
-routes.delete("/delete/:id", deleteBook);
-routes.patch("/patchBook/:id", patchBook);
+routes.post("/", CreateBook);
+routes.get("/", getBook);
+routes.get("/:id", bookGet);
+routes.delete("/:id", deleteBook);
+routes.patch("/:id", patchBook);
 export default routes;
