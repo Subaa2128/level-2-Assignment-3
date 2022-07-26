@@ -14,24 +14,40 @@ import shomaNarayanan from "../assets/authorSlider/shomaNarayanan.webp";
 import julesVerne from "../assets/authorSlider/julesVerne.webp";
 
 function AuthorSlider() {
-  var settings = {
-    dots: true,
+  const authorSetting = {
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: 6,
+    slidesToScroll: 1,
     autoplay: true,
     cssEase: "linear",
+    resposive: [
+      {
+        breakpoint: 760,
+        settings: {
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   return (
-    <div>
+    <div className="author-filter">
       {" "}
-      <div>
+      <div className="author-button">
         <Link to={"/author"}>
           <button>View All</button>
         </Link>
       </div>
-      <Slider {...settings}>
+      <Slider {...authorSetting}>
         <div className="slider">
           <img src={stephenKing} alt="" />
           <h3>Stephen King</h3>

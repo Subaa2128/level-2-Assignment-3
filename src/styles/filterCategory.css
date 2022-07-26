@@ -1,0 +1,229 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.book-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+@media (max-width: 700px) {
+  .book-category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 470px) {
+  .book-category {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.book-category .book {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/book.jpg);
+  transition: all 1s ease;
+}
+.book-category .book:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .fantacy {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/fantacy.jpg);
+  transition: all 1s ease;
+}
+.book-category .fantacy:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .history {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/history.webp);
+  transition: all 1s ease;
+}
+.book-category .history:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .action {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/action.webp);
+  transition: all 1s ease;
+}
+.book-category .action:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .horror {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/horrorImage.jpg);
+  transition: all 1s ease;
+}
+.book-category .horror:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .food {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/food&drink.jpg);
+  transition: all 1s ease;
+}
+.book-category .food:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .science {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/science.jpg);
+  transition: all 1s ease;
+}
+.book-category .science:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .romance {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/romance.jpg);
+  transition: all 1s ease;
+}
+.book-category .romance:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category .thriller {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/book/thriller.jpg);
+  transition: all 1s ease;
+}
+.book-category .thriller:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 10px 12px 14px 10px, rgba(0, 0, 0, 0.32) 0px 2px 16px 0px;
+  transform: scale(0.96);
+}
+.book-category p {
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 80px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+.book-category a {
+  text-decoration: none;
+}
+
+.create-book {
+  padding-left: 40px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.create-book h1 {
+  padding-bottom: 20px;
+}
+.create-book .create-input {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.create-book .create-input input {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0px 20px;
+}
+@media (max-width: 650px) {
+  .create-book .create-input input {
+    width: 80%;
+  }
+}
+.create-book .create-input .image-input {
+  border: 1px solid gray;
+}
+.create-book .button {
+  display: flex;
+  justify-content: right;
+  margin-right: 80px;
+}
+.create-book .button button {
+  padding: 8px 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #001440;
+  color: #001440;
+}
+.create-book .button button:hover {
+  background-color: #001440;
+  color: #fff;
+}
+
+.edit {
+  padding: 20px;
+}
+.edit .edit-input {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+}
+.edit .edit-input p {
+  color: #3e3e3e;
+}
+@media (max-width: 655px) {
+  .edit .edit-input {
+    display: block;
+  }
+}
+.edit .edit-input input {
+  padding: 15px 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.edit .edit-input img {
+  width: 30%;
+}
+.edit .button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 40px;
+}
+.edit .button button {
+  color: #fff;
+  background-color: #001440;
+  padding: 20px;
+  text-transform: uppercase;
+}
+.edit .button button:hover {
+  color: #fff;
+  background-color: #003959;
+}/*# sourceMappingURL=filterCategory.css.map */

@@ -1,0 +1,164 @@
+@import "mixin";
+@import "colorMixin";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.book-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+  @media (max-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 470px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .book {
+    @include backgroundImage;
+    background-image: url(../assets/book/book.jpg);
+    @include transform;
+  }
+  .fantacy {
+    @include backgroundImage;
+    background-image: url(../assets/book/fantacy.jpg);
+    @include transform;
+  }
+  .history {
+    @include backgroundImage;
+    background-image: url(../assets/book/history.webp);
+    @include transform;
+  }
+  .action {
+    @include backgroundImage;
+    background-image: url(../assets/book/action.webp);
+    @include transform;
+  }
+  .horror {
+    @include backgroundImage;
+    background-image: url(../assets/book/horrorImage.jpg);
+    @include transform;
+  }
+  .food {
+    @include backgroundImage;
+    background-image: url(../assets/book/food&drink.jpg);
+    @include transform;
+  }
+  .science {
+    @include backgroundImage;
+    background-image: url(../assets/book/science.jpg);
+    @include transform;
+  }
+  .romance {
+    @include backgroundImage;
+    background-image: url(../assets/book/romance.jpg);
+    @include transform;
+  }
+  .thriller {
+    @include backgroundImage;
+    background-image: url(../assets/book/thriller.jpg);
+    @include transform;
+  }
+  p {
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 80px;
+    color: $white;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.create-book {
+  padding-left: 40px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  h1 {
+    padding-bottom: 20px;
+  }
+  .create-input {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    input {
+      width: 50%;
+      padding: 10px;
+      margin: 10px 0px 20px;
+      @media (max-width: 650px) {
+        width: 80%;
+      }
+    }
+    .image-input {
+      border: 1px solid $gray;
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: right;
+    margin-right: 80px;
+    button {
+      padding: 8px 16px;
+      border-radius: 3px;
+      background-color: $white;
+      border: 1px solid $bg;
+      color: $bg;
+      &:hover {
+        background-color: $bg;
+        color: $white;
+      }
+    }
+  }
+}
+
+.edit {
+  padding: 20px;
+
+  .edit-input {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    p {
+      color: #3e3e3e;
+    }
+
+    @media (max-width: 655px) {
+      display: block;
+    }
+    input {
+      padding: 15px 10px;
+      outline: none;
+      border: 1px solid $gray;
+      border-radius: 2px;
+    }
+    img {
+      width: 30%;
+    }
+  }
+  .button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 40px;
+    button {
+      color: $white;
+      background-color: $bg;
+      padding: 20px;
+      text-transform: uppercase;
+      &:hover {
+        color: $white;
+        background-color: $blue;
+      }
+    }
+  }
+}

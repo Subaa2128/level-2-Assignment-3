@@ -8,8 +8,11 @@ function Login() {
   const [password, setPassword] = useState("");
   const [passwordLogin, setPasswordLogin] = useState("");
   const [emailLogin, setEmailLogin] = useState("");
+  const [value, setValue] = useState(false);
+  const [close, setClose] = useState(true);
 
   const signUp = async () => {
+    // Create and store data in local storage
     try {
       const { data } = await axios.post(`http://localhost:5000/users/signIn`, {
         name: name,
@@ -19,6 +22,7 @@ function Login() {
 
       localStorage.setItem("user", JSON.stringify(data));
       console.log(data);
+      alert(`Welcome ${data.name}`);
       setEmail("");
       setName("");
       setPassword("");
@@ -26,6 +30,8 @@ function Login() {
       console.log("can't update");
     }
   };
+
+  // function matches login with signup data
   const login = async () => {
     try {
       const { data } = await axios.post(`http://localhost:5000/users/logIn`, {
@@ -40,36 +46,95 @@ function Login() {
   };
   return (
     <div>
-      <div className="login-inputs">
-        <input
-          type="text"
-          placeholder="Enter Your Name"
-          required
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Enter Your email"
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Enter Your password"
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <div className="login-buttons">
-        <button onClick={signUp}>signUp</button>
-      </div>
+      {close && (
+        <div className="overlay">
+          <div className="wrapper">
+            <a href="#" className="close" onClick={() => setClose(false)}>
+              &times;
+            </a>
+            <div className="column details">
+              {!value && (
+                <div className="signin">
+                  <h1>Sign In</h1>
+                  <input
+                    type="email"
+                    placeholder="UserEmail"
+                    onChange={(e) => setEmailLogin(e.target.value)}
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) => setPasswordLogin(e.target.value)}
+                  />
+                  <a href="#">Forgot Password</a>
+                  <button className="form-submit" onClick={login}>
+                    Sign In
+                  </button>
+                  <span>
+                    You don't have an account yet?
+                    <button id="signUp" onClick={() => setValue(true)}>
+                      {" "}
+                      Create in Now
+                    </button>
+                  </span>
+                </div>
+              )}
 
-      <div>
-        <input type="text" onChange={(e) => setEmailLogin(e.target.value)} />
-        <input type="text" onChange={(e) => setPasswordLogin(e.target.value)} />
+              {value && (
+                <div className="signup">
+                  <h1>Sign Up</h1>
+                  <input
+                    type="name"
+                    placeholder="Full Name"
+                    required
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <input
+                    type="email"
+                    placeholder="Username"
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button className="form-submit" onClick={signUp}>
+                    Sign Up
+                  </button>
+                  <span>
+                    Already have an account?
+                    <button id="signIn" onClick={() => setValue(false)}>
+                      Sign In
+                    </button>
+                  </span>
+                </div>
+              )}
+            </div>
 
-        <button onClick={login}>log In</button>
-      </div>
+            <div className="column content">
+              {!value && (
+                <div className="signin">
+                  <h1>Welcome Back!</h1>
+                  <p>
+                    To keep connected with us please login with our personal
+                    info.
+                  </p>
+                </div>
+              )}
+
+              {value && (
+                <div className="signup">
+                  <h1>Hello, Friend!</h1>
+                  <p>Enter your personal details and start journey with us</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

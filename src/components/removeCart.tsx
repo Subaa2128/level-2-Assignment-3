@@ -1,32 +1,34 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../styles/navBar.css";
 
 function RemoveCart() {
-  const [details, setDetails] = useState<any>([]);
-  // const [id, setId] = useState(() => {
-  //   const data = localStorage.getItem("id");
-  //   const parsdata = JSON.parse(data)
-  //   details.filter((pro: any) => {
-  //     const d = parsdata.find((f: number) => f === pro._id);
-  //     return d ? true : false;
-  //   });
-  // });
   const [data, setData] = useState<any>([]);
+  const [ids] = useState(() => {
+    const data = localStorage.getItem("id");
+    if (!data) return [];
+    const parsedData = JSON.parse(data);
+    return parsedData;
+  });
+
+  // Get particular id from data
+  const handleGetData = useCallback(async () => {
+    const result = await Promise.all(
+      ids.map(async (id: any) => {
+        const { data } = await axios.get(`http://localhost:5000/books/${id}`);
+        console.log(data);
+        return data;
+      })
+    );
+    setData(result);
+  }, [ids]);
 
   useEffect(() => {
-    const init = async () => {
-      try {
-        const { data } = await axios.get(`http://localhost:5000/books/get`);
+    handleGetData();
+  }, [handleGetData]);
 
-        setDetails(data);
-      } catch (data) {
-        console.log(data);
-      }
-    };
-    init();
-  }, []);
-
+  //remove function
   const removeClick = (id: number) => {
     const oldCart = JSON.parse(localStorage.getItem("id") || "[]");
 
@@ -35,25 +37,36 @@ function RemoveCart() {
     if (isOldId) {
       const filteredData = oldCart.filter((p: number) => p !== id);
       localStorage.setItem("id", JSON.stringify(filteredData));
+
       return;
     }
   };
 
   return (
     <div>
-      {/* {" "} */}
       <div className="cart-products">
-        {data.map((cartItem: any) => {
-          return (
-            <div className="all-products" key={cartItem.id}>
-              <h3>{cartItem.title}</h3>
-              <p>{cartItem.price}</p>
-              <button onClick={() => removeClick(cartItem.id)}>
-                remove to cart
-              </button>
-            </div>
-          );
-        })}
+        {!data.length ? (
+          <h1>No Items Selected</h1>
+        ) : (
+          data.map((cartItem: any) => {
+            return (
+              <div className="all-products" key={cartItem._id}>
+                <div className="image">
+                  <img src={cartItem.image} alt="" />
+                </div>
+                <div className="cart-content">
+                  <h3>{cartItem.title}</h3>
+                  <div className="cart-price">
+                    <p>₹{cartItem.price}</p>
+                    <button onClick={() => removeClick(cartItem.id)}>
+                      remove to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );

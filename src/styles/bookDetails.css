@@ -4,16 +4,73 @@
   box-sizing: border-box;
 }
 
-h1 {
-  text-align: center;
+.book-details {
   padding: 20px;
+}
+.book-details .link {
+  display: flex;
+  gap: 10px;
+}
+.book-details .link a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .book-details-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  align-items: center;
 }
 .book-details-grid .book-details-image img {
   margin-left: 30px;
   width: 70%;
+}
+.book-details-grid .book-content {
+  padding: 20px;
+  text-transform: capitalize;
+}
+.book-details-grid .book-content .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px 0px;
+  border-bottom: 1px solid gray;
+}
+.book-details-grid .book-content .icons .icon {
+  font-size: 20px;
+  margin: 8px;
+  padding: 5px;
+  background: #003959;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+.book-details-grid .book-content .content {
+  padding: 20px 0;
+}
+.book-details-grid .book-content .content p {
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
+.book-details-grid .book-content button {
+  width: 70%;
+  padding: 10px 20px;
+  margin-left: 60px;
+  color: #001440;
+  border: 2px solid #001440;
+  background-color: #fff;
+}
+.book-details-grid .book-content button:hover {
+  color: #fff;
+  background: #001440;
+}
+
+.read-more-read-less h3 {
+  padding: 20px 0 10px;
+}
+.read-more-read-less button {
+  border: none;
+  background: #fff;
+  text-decoration: underline;
+  color: #001440;
 }/*# sourceMappingURL=bookDetails.css.map */

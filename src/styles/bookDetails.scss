@@ -1,20 +1,82 @@
+@import "colorMixin";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-h1 {
-  text-align: center;
+
+.book-details {
   padding: 20px;
+  .link {
+    display: flex;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
 }
 
 .book-details-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  align-items: center;
   .book-details-image {
     img {
       margin-left: 30px;
       width: 70%;
     }
+  }
+  .book-content {
+    padding: 20px;
+    text-transform: capitalize;
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5px 0px;
+      border-bottom: 1px solid $gray;
+      .icon {
+        font-size: 20px;
+        margin: 8px;
+        padding: 5px;
+        background: $blue;
+        color: $white;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .content {
+      padding: 20px 0;
+      p {
+        text-transform: capitalize;
+        padding-bottom: 20px;
+      }
+    }
+    button {
+      width: 70%;
+      padding: 10px 20px;
+      margin-left: 60px;
+      color: $bg;
+      border: 2px solid $bg;
+      background-color: $white;
+      &:hover {
+        color: $white;
+        background: $bg;
+      }
+    }
+  }
+}
+
+.read-more-read-less {
+  h3 {
+    padding: 20px 0 10px;
+  }
+  button {
+    border: none;
+    background: $white;
+    text-decoration: underline;
+    color: $bg;
   }
 }

@@ -1,9 +1,14 @@
 @import "colorMixin";
+@import "mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Rancho&family=Rye&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: "Rye", cursive;
 }
 
 .book-slider {
@@ -15,41 +20,232 @@
     }
   }
 }
-.slider {
-  margin: 60px;
-  img {
-    border-radius: 50%;
-    width: 60%;
-    height: 30vh;
-    object-fit: cover;
-    border: 2px solid $main-color;
-  }
-  h3 {
-    margin-left: 30px;
-    color: $main-color;
-  }
+h2 {
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .poster {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
-  border: 6px solid black;
-}
+  padding: 10px;
+  @media (max-width: 700px) {
+    display: block;
+  }
+  .poster-image {
+    width: 100%;
+    object-fit: contain;
+  }
+  .book-grid {
+    border: 6px solid $black;
+    padding: 20px;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
 
+    .card {
+      position: relative;
+      padding: 5px;
+      overflow: hidden;
+      &:hover {
+        .content {
+          bottom: 0;
+        }
+      }
+    }
+    .content {
+      padding: 10px 15px 5px 5px;
+      position: absolute;
+      width: 100%;
+      background: $white;
+      bottom: -50%;
+      transition: all 0.3s ease;
+
+      .buttons {
+        @include flex;
+        margin-top: 20px;
+        button {
+          width: 100%;
+          border: none;
+          padding: 10px 0;
+          font-size: 17px;
+          border-radius: 3px;
+          border: 2px solid $bg;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:first-child {
+            color: $bg;
+            background: $white;
+            margin-right: 100px;
+            &:hover {
+              color: $white;
+              background: $bg;
+            }
+          }
+          &:last-child {
+            color: $white;
+            background: $bg;
+            &:hover {
+              color: $bg;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.book-poster {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 .tamil-poster {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  border: 6px solid green;
-  margin-top: 20px;
+  padding: 10px;
+  @media (max-width: 700px) {
+    display: block;
+  }
+  .poster-image {
+    object-fit: contain;
+    img {
+      width: 100%;
+      height: 70vh;
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+  .book-grid {
+    border: 6px solid $black;
+    padding: 20px;
+    .card {
+      position: relative;
+      padding: 5px;
+      overflow: hidden;
+      &:hover {
+        .content {
+          bottom: 0;
+        }
+      }
+    }
+    .content {
+      padding: 10px 15px 5px 5px;
+      position: absolute;
+      width: 100%;
+      background: $white;
+      bottom: -50%;
+      transition: all 0.3s ease;
+
+      .buttons {
+        @include flex;
+        margin-top: 20px;
+        button {
+          width: 100%;
+          border: none;
+          padding: 10px 0;
+          font-size: 17px;
+          border-radius: 3px;
+          border: 2px solid $bg;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:first-child {
+            color: $bg;
+            background: $white;
+            margin-right: 100px;
+            &:hover {
+              color: $white;
+              background: $bg;
+            }
+          }
+          &:last-child {
+            color: $white;
+            background: $bg;
+            &:hover {
+              color: $bg;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .romance-poster {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  border: 6px solid brown;
-  margin-top: 20px;
+  padding: 10px;
+  @media (max-width: 700px) {
+    display: block;
+  }
+  .poster-image {
+    object-fit: contain;
+    img {
+      width: 100%;
+      height: 70vh;
+      @media (max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+  .book-grid {
+    border: 6px solid rgb(136, 82, 136);
+    padding: 20px;
+    .card {
+      position: relative;
+      padding: 5px;
+      overflow: hidden;
+      &:hover {
+        .content {
+          bottom: 0;
+        }
+      }
+    }
+    .content {
+      padding: 10px 15px 5px 5px;
+      position: absolute;
+      width: 100%;
+      background: $white;
+      bottom: -50%;
+      transition: all 0.3s ease;
+
+      .buttons {
+        @include flex;
+        margin-top: 20px;
+        button {
+          width: 100%;
+          border: none;
+          padding: 10px 0;
+          font-size: 17px;
+          border-radius: 3px;
+          border: 2px solid $bg;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:first-child {
+            color: $bg;
+            background: $white;
+            margin-right: 100px;
+            &:hover {
+              color: $white;
+              background: $bg;
+            }
+          }
+          &:last-child {
+            color: $white;
+            background: $bg;
+            &:hover {
+              color: $bg;
+              background: $white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .poster-image {
@@ -61,5 +257,104 @@
 .book-grid {
   img {
     width: 90%;
+  }
+}
+
+.author-filter {
+  background: $bg;
+
+  .author-button {
+    display: flex;
+    justify-content: right;
+    margin: 15px 50px 0;
+    button {
+      padding: 5px 20px;
+      @include input;
+      border: 2px solid $blue;
+      background: $white;
+      color: $bg;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .slider {
+    margin: 40px 20px 0;
+    img {
+      border-radius: 50%;
+      width: 70%;
+      height: 25vh;
+      object-fit: cover;
+      border: 2px solid $main-color;
+    }
+    h3 {
+      margin-left: 10px;
+      color: $main-color;
+    }
+  }
+}
+h2 {
+  font-family: "Fredericka the Great", cursive;
+}
+.footer {
+  background: $bg;
+  padding: 20px;
+  img {
+    width: 150px;
+  }
+  .footer-icon {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    @media (max-width: 545px) {
+      display: block;
+      text-align: center;
+      justify-content: right;
+    }
+    .icons {
+      display: flex;
+      margin-right: 50px;
+      gap: 30px;
+      font-size: 25px;
+      @media (max-width: 545px) {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 20px;
+        font-size: 15px;
+        margin: 0;
+      }
+    }
+  }
+  .footer-collection {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    border-bottom: 1px solid $gray;
+    padding-top: 10px;
+    @media (max-width: 820px) {
+      display: block;
+      // text-align: center;
+    }
+    p {
+      text-transform: capitalize;
+      margin: 10px;
+    }
+  }
+  .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    padding: 10px;
+    @media (max-width: 825px) {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+.poster-pamplet {
+  img {
+    width: 100%;
   }
 }

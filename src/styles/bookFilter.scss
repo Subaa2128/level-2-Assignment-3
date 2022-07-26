@@ -1,22 +1,200 @@
+@import "mixin";
+@import "colorMixin";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.book-grid {
-  align-items: center;
+.filter-container {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  @media (max-width: 760px) {
+    display: block;
+  }
+  .category-list {
+    width: 500px;
+    padding: 5px;
+  }
+}
+.filter-category-link {
+  cursor: pointer;
+  color: $bg;
   text-align: center;
+  padding: 20px;
+  &:hover {
+    background-color: $bg;
+    color: $white;
+  }
+  h3 {
+    font-size: large;
+  }
+}
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 20px 0 20px;
+  .sort-filter {
+    display: flex;
+    align-items: center;
+    @media (max-width: 400px) {
+      display: block;
+    }
+    select {
+      padding: 10px;
+      border: 2px solid $bg;
+      border-radius: 5px;
+    }
+  }
+}
+.book-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   padding: 10px;
-  img {
-    width: 150px;
+  @media (max-width: 955px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .book-button-flex {
+  @media (max-width: 655px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 455px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .wrapper {
+    border: 2px solid $bg;
+
+    .card {
+      position: relative;
+      padding: 5px;
+      overflow: hidden;
+      &:hover {
+        .content {
+          bottom: 0;
+        }
+      }
+      img {
+        width: 100%;
+        height: 50vh;
+        object-fit: contain;
+        border-radius: 3px;
+      }
+      .content {
+        padding: 10px 15px 5px 5px;
+        position: absolute;
+        width: 100%;
+        background: $white;
+        bottom: -50%;
+        transition: all 0.3s ease;
+
+        .buttons {
+          @include flex;
+          margin-top: 20px;
+          justify-content: space-around;
+          .button {
+            button {
+              width: 100%;
+              border: none;
+              padding: 10px 0;
+              font-size: 17px;
+              border-radius: 3px;
+              border: 2px solid $bg;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              z-index: 10;
+              &:first-child {
+                color: $bg;
+                background: $white;
+                margin-right: 50px;
+                &:hover {
+                  color: $white;
+                  background: $bg;
+                }
+              }
+              &:last-child {
+                color: $white;
+                background: $bg;
+                margin-left: 1px;
+                &:hover {
+                  color: $bg;
+                  background: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 20px;
+      text-transform: capitalize;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+    .row {
+      @include flex;
+      justify-content: space-around;
+      padding: 20px;
+      .details {
+        span {
+          font-size: 17px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.filter-category {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background-color: $bg;
+  color: $white;
+  width: 30%;
+  padding: 20px 20px 20px 20px;
+  text-transform: capitalize;
+  .close {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    overflow: hidden;
   }
-  .cart-button {
-    width: 80%;
+  h1 {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+  }
+  .author {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: $blue;
+    padding: 20px;
+  }
+  .container {
+    .price-filter {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .filt {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
   }
 }

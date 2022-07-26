@@ -1,0 +1,41 @@
+@import "colorMixin";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.author-filter-page {
+  padding: 30px;
+  .author-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray;
+    .search-bar {
+      background-color: aqua;
+
+      input {
+        padding: 7px;
+      }
+      .search-icon {
+        width: 30px;
+      }
+    }
+  }
+  .author-filter-alphabet {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid $gray;
+    transition: all 0.3s ease;
+    p {
+      padding: 20px;
+      &:hover,
+      &.active {
+        background-color: royalblue;
+      }
+    }
+  }
+}

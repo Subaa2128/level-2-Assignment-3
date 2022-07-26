@@ -6,6 +6,7 @@ import Edit from "./pages/Edit";
 import CreateBook from "./pages/CreateBook";
 import BookDetails from "./pages/BookDetails";
 import AuthorFilter from "./pages/AuthorFilter";
+import Fil from "./pages/Filter";
 const App = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/Create" element={<CreateBook />} />
       <Route path="/author" element={<AuthorFilter />} />
       <Route path="/details/:id" element={<BookDetails />} />
+      <Route path="/filt" element={<Fil />} />
     </Routes>
   );
 };

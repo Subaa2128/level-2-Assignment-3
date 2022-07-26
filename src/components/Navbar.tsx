@@ -1,20 +1,28 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo/bookLogo.png";
+import Login from "./Login";
+import CreateLogin from "./CreateLogin";
 import "../styles/navBar.css";
-import { FaSearch, FaOpencart } from "react-icons/fa";
-import { TiUser } from "react-icons/ti";
+import { FaSearch, FaShoppingCart, FaBookOpen } from "react-icons/fa";
+import { GiNotebook } from "react-icons/gi";
 import axios from "axios";
 import RemoveCart from "../components/removeCart";
+import { Link } from "react-router-dom";
+import _ from "lodash";
+
 function Navbar() {
   const [value, setValue] = useState<any>([]);
   const [filteredData, setFilterData] = useState<any>([]);
   const [filteredAuthor, setFilterAuthor] = useState<any>([]);
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
+  const [openCart, setOpenCart] = useState(true);
+  const [openBook, setOpenBook] = useState(true);
 
+  //get all book from data
   useEffect(() => {
     const init = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5000/books/get`);
+        const { data } = await axios.get(`http://localhost:5000/books/`);
         setValue(data);
       } catch (data) {
         console.log(data);
@@ -23,57 +31,69 @@ function Navbar() {
     init();
   }, []);
 
+  // search filter function on title and author
   const handleFilter = (e: any) => {
     const inputNameValue = e.target.value;
     const newFilter = value.filter((obj: any) => {
       return obj.title.toLowerCase().includes(inputNameValue.toLowerCase());
     });
+    console.log(value);
     const authorFilter = value.filter((obj: any) => {
       return obj.author.toLowerCase().includes(inputNameValue.toLowerCase());
     });
+
     if (inputNameValue === "") {
       setFilterAuthor([]);
       setFilterData([]);
     } else {
       setFilterData(newFilter);
-      setFilterAuthor(authorFilter);
+      setFilterAuthor(_.uniqBy(authorFilter, (obj: any) => obj.author));
     }
   };
 
   return (
     <>
       <div className="navbar">
-        <div className="logo">
-          <img src={logo} alt="..." />
-        </div>
-        <div className="search-bar">
-          <div>
-            <input
-              onChange={handleFilter}
-              type="search"
-              placeholder="Search books by Title, Author"
-            />
+        <div className="nav">
+          <div className="logo">
+            <Link to={"/"}>
+              <img src={logo} alt="..." />
+            </Link>{" "}
           </div>
-          <div className="search-icon">
-            <FaSearch />
+          <div className="search-bar">
+            <div className="search-sort">
+              <div className="search-icon">
+                <FaSearch />
+              </div>
+            </div>
+            <div>
+              <input
+                onChange={handleFilter}
+                type="search"
+                placeholder="Search books by Title, Author"
+              />
+            </div>
           </div>
-
-          <select defaultValue={"DEFAULT"}>
-            <option value="DEFAULT" disabled>
-              None
-            </option>
-            <option value="author">By Author</option>
-            <option value="title">By Title</option>
-          </select>
-        </div>
-        <div className="icons">
-          <div className="user login">
-            <TiUser />
+          <div className="user-login " onClick={() => setOpenModal((m) => !m)}>
             Login
           </div>
-          <div className="user cart">
-            <FaOpencart onClick={() => setOpenModal((m) => !m)} />
-            Cart
+        </div>
+        <div className="icons">
+          <div className="user">
+            <Link to={"/book"}>
+              <FaBookOpen />
+              <p>Book</p>
+            </Link>
+          </div>
+
+          <div className="user " onClick={() => setOpenCart((m) => !m)}>
+            <FaShoppingCart />
+
+            <p> Cart</p>
+          </div>
+          <div className="user " onClick={() => setOpenBook((m) => !m)}>
+            <GiNotebook />
+            <p>Create</p>
           </div>
         </div>
       </div>
@@ -95,9 +115,19 @@ function Navbar() {
           </div>
         )}
       </div>
-      {!openModal && (
+      {!openCart && (
         <div className="cart">
           <RemoveCart />
+        </div>
+      )}
+      {!openModal && (
+        <div className="cart">
+          <Login />
+        </div>
+      )}
+      {!openBook && (
+        <div className="cart">
+          <CreateLogin />
         </div>
       )}
     </>
