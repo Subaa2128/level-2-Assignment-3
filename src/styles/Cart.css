@@ -14,20 +14,101 @@
   gap: 30px;
 }
 
+@media (max-width: 1080px) {
+  .Cart_main {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 950px) {
+  .Cart_main {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .Cart_main {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .Cart_main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .Cart_main .Cart_contant {
-  padding: 20px;
+  padding: 25px 0 25px;
   text-align: center;
   border: 1px solid #dccbcb;
 }
 
+@media (max-width: 360px) {
+  .Cart_main .Cart_contant {
+    padding: 25px 10px 25px;
+  }
+}
+
+.Cart_main .Cart_contant:hover {
+  -webkit-animation: bounce 1s linear;
+          animation: bounce 1s linear;
+}
+
+@-webkit-keyframes bounce {
+  20%,
+  50%,
+  80%,
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  70% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+
+@keyframes bounce {
+  20%,
+  50%,
+  80%,
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  70% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+
 .Cart_main .Cart_contant img {
   width: 180px;
-  height: 250px;
 }
 
 .Cart_main .Cart_contant h2 {
   font-size: 17px;
-  width: 72%;
   margin-top: 8px;
   font-family: sans-serif;
   overflow: hidden;
@@ -41,6 +122,7 @@
   margin-top: 4px;
   font-size: 25px;
   margin-left: -30px;
+  padding: 5px;
 }
 
 .Cart_main .Cart_contant .btns {
@@ -51,14 +133,80 @@
   margin-left: 20px;
 }
 
-.Cart_main .Cart_contant .btns .like_btn button,
 .Cart_main .Cart_contant .btns .delete_btn button {
-  background: #ff5403;
-  color: #fff;
-  outline: none;
-  border: none;
+  background: #603601;
+  border: 4px solid #cc9544;
+  font-size: 15px;
+  color: #ffe6ab;
   padding: 5px 10px;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 822px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 720px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 635px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 506px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 366px) {
+  .Cart_main .Cart_contant .btns .delete_btn button {
+    margin-left: 20px;
+  }
 }
 /*# sourceMappingURL=Cart.css.map */

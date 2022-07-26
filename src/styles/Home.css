@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&family=Philosopher:ital,wght@1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,54 @@
   position: absolute;
   width: 100%;
   height: 530px;
+  z-index: 10;
+}
+
+@media (max-width: 1190px) {
+  .header_images .slide_1,
+  .header_images .slide_2,
+  .header_images .slide_3,
+  .header_images .slide_4 {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header_images .slide_1,
+  .header_images .slide_2,
+  .header_images .slide_3,
+  .header_images .slide_4 {
+    height: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header_images .slide_1,
+  .header_images .slide_2,
+  .header_images .slide_3,
+  .header_images .slide_4 {
+    height: 260px;
+  }
+}
+
+@media (max-width: 630px) {
+  .header_images .slide_1,
+  .header_images .slide_2,
+  .header_images .slide_3,
+  .header_images .slide_4 {
+    height: 230px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 370px) {
+  .header_images .slide_1,
+  .header_images .slide_2,
+  .header_images .slide_3,
+  .header_images .slide_4 {
+    height: 130px;
+  }
 }
 
 .header_images .slide_1 {
@@ -181,21 +230,87 @@
   }
 }
 
+.iconHead {
+  margin-top: 38%;
+}
+
+.iconHead h2 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Philosopher", sans-serif;
+}
+
+@media (max-width: 1410px) {
+  .iconHead h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 1255px) {
+  .iconHead h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 535px) {
+  .iconHead h2 {
+    font-size: 25px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 460px) {
+  .iconHead h2 {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .iconHead h2 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .iconHead h2 {
+    margin-top: 40px;
+  }
+}
+
 .bIcon {
   padding: 50px;
+}
+
+@media (max-width: 460px) {
+  .bIcon {
+    padding: 30px;
+  }
 }
 
 .bIcon .books_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 40%;
   gap: 50px;
   font-size: 80px;
-  color: #ff5403;
+  color: #603601;
   padding: 35px;
   border-top: 3px solid #a5a4a4;
   border-bottom: 3px solid #a5a4a4;
+}
+
+@media (max-width: 600px) {
+  .bIcon .books_icon {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .bIcon .books_icon {
+    padding: 10px;
+  }
 }
 
 .bIcon .books_icon .fiction p {
@@ -207,6 +322,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Exo", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -214,9 +330,39 @@
   color: #000;
 }
 
+@media (max-width: 600px) {
+  .bIcon .books_icon .fiction {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  .bIcon .books_icon .fiction {
+    margin-left: 75px;
+  }
+}
+
+.front_img {
+  padding: 30px;
+}
+
+.front_img img {
+  width: 150px;
+  height: 200px;
+}
+
+@media (max-width: 350px) {
+  .front_img {
+    margin-left: 30px;
+  }
+}
+
 .trendHeading h1 {
-  margin-top: 20px;
+  margin-top: 14px;
   text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Philosopher", sans-serif;
 }
 
 .trendHeading .rending {
@@ -224,7 +370,7 @@
 }
 
 .trendHeading .rending img {
-  border: 5px double #000;
+  border: 5px double #cc9544;
   padding: 2px;
 }
 
@@ -244,28 +390,166 @@
   margin-left: 45px;
 }
 
+@media (max-width: 1000px) {
+  .trendHeading {
+    display: none;
+  }
+}
+
+.categories h2 {
+  text-align: center;
+  margin-bottom: 52px;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Philosopher", sans-serif;
+}
+
+@media (max-width: 400px) {
+  .categories h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.fiction_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 15px;
+}
+
+@media (max-width: 700px) {
+  .fiction_img {
+    display: block;
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+
+.fiction_img img {
+  border: 1px solid #cc9544;
+  width: 100%;
+}
+
+.headingTwo h2 {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Philosopher", sans-serif;
+}
+
+@media (max-width: 350px) {
+  .headingTwo h2 {
+    margin-bottom: -35px;
+  }
+}
+
+.front_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #645f5f;
+}
+
+.front_img .box {
+  padding: 20px;
+}
+
+.front_img .box img {
+  margin-left: 218x;
+  margin-top: 5px;
+}
+
+.front_img .box p {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.front_img .box h5 {
+  margin-top: 10px;
+}
+
 .homeBooks {
-  padding: 60px;
+  padding: 20px 50px 0px;
   position: relative;
-  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .homeBooks {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeBooks {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .homeBooks {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .homeBooks {
+    padding: 10px 20px 0px;
+  }
+}
+
+.homeBooks h1 {
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Philosopher", sans-serif;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 415px) {
+  .homeBooks h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .homeBooks h1 {
+    font-size: 26px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+  }
 }
 
 .homeBooks h2 {
   text-align: center;
-  font-size: 40px;
-  margin-bottom: 60px;
+  font-size: 38px;
+  margin-bottom: 70px;
+  margin-left: 8px;
+  width: 60px;
 }
 
 .homeBooks .homeBook_slider img {
-  width: 200px;
+  width: 190px;
   height: 250px;
 }
 
 .homeBooks .homeBook_slider h2 {
-  font-size: 16px;
-  width: 72%;
+  font-size: 14px;
+  font-family: "Exo", sans-serif;
+  width: 60%;
   margin-top: 8px;
-  text-align: center;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -273,31 +557,45 @@
   line-clamp: 1;
 }
 
-.homeBooks .homeBook_slider h4 {
-  margin-top: -20px;
-  margin-left: 70px;
+@media (max-width: 500px) {
+  .homeBooks .homeBook_slider {
+    margin-left: 60px;
+  }
 }
 
-.homeBooks .homeBook_slider .card_btn {
-  margin-left: 37px;
-  margin-top: 10px;
+@media (max-width: 415px) {
+  .homeBooks .homeBook_slider {
+    margin-left: 30px;
+  }
 }
 
-.homeBooks .homeBook_slider .card_btn button {
-  outline: none;
-  border: none;
-  padding: 6px 12px;
-  background: #ff5403;
-  color: #fff;
+@media (max-width: 340px) {
+  .homeBooks .homeBook_slider {
+    margin-left: 15px;
+  }
 }
 
 .bookStore img {
-  margin-top: 40px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .bookStore {
+    margin-bottom: 30px;
+  }
 }
 
 .headerImg {
   padding: 50px;
   margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+  .headerImg {
+    margin-top: 0px;
+    padding: 10px;
+  }
 }
 
 .headerImg img {
@@ -306,8 +604,197 @@
 
 .headerImg p {
   text-align: center;
-  margin-top: 12px;
-  font-size: 26px;
+  margin-top: 18px;
+  font-size: 28px;
   font-weight: 600;
+  font-family: "Philosopher", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .headerImg p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 660px) {
+  .headerImg p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .headerImg p {
+    font-size: 8px;
+  }
+}
+
+.author_heading h2 {
+  text-align: center;
+  font-family: "Philosopher", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.author_heading .author_images {
+  padding: 50px;
+}
+
+.author_heading .author_images img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50px;
+}
+
+.author_heading .author_images p {
+  font-size: 16px;
+  font-family: "Exo", sans-serif;
+  padding: 10px;
+}
+
+@media (max-width: 345px) {
+  .author_heading .author_images {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 470px) {
+  .author_heading .author_images {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 363px) {
+  .author_heading .author_images {
+    margin-left: 20px;
+  }
+}
+
+.authors h3 {
+  font-size: 35px;
+  font-family: "Philosopher", sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.authors .alphabet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #603601;
+  padding: 10px;
+  margin: 20px;
+  gap: 25px;
+}
+
+@media (max-width: 1068px) {
+  .authors .alphabet {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .authors .alphabet {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 740px) {
+  .authors .alphabet {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 620px) {
+  .authors .alphabet {
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .authors .alphabet {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .authors .alphabet {
+    display: block;
+  }
+}
+
+.authors .alphabet p {
+  color: #ffe6ab;
+  cursor: pointer;
+}
+
+.authors .alphabet p:hover {
+  text-decoration: underline;
+  color: #cc9544;
+}
+
+@media (max-width: 400px) {
+  .authors .alphabet p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 6px;
+    background: #9c702d;
+  }
+}
+
+.authors .alphaPara {
+  text-align: center;
+}
+
+.authors .alphaPara h6 {
+  color: #603601;
+  font-size: 22px;
+  font-family: "Exo", sans-serif;
+  margin-bottom: 5px;
+}
+
+.authors .author_head p {
+  color: #603601;
+  font-family: "Exo", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.authorImg {
+  margin-bottom: 30px;
+}
+
+.authorImg img {
+  width: 100%;
+  height: 450px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .authorImg img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .authorImg img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .authorImg img {
+    width: 100%;
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

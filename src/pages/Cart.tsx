@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useCallback } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../styles/Cart.css";
 interface Store {
-  _id: string;
+  _id: number;
   title: string;
   price: string;
   image: string;
@@ -10,23 +13,43 @@ interface Store {
 
 const Cart: React.FC = () => {
   const [items, setItems] = useState<Store[]>([]);
+  const [id, setId] = useState(() => {
+    const data = localStorage.getItem("title");
+    if (!data) return [];
+    const parsedData = JSON.parse(data);
+    return parsedData;
+  });
+
+  const handleGetData = useCallback(async () => {
+    const result = await Promise.all(
+      id.map(async (id: any) => {
+        const { data } = await axios.get(`http://localhost:5000/books/${id}`);
+        console.log(data);
+        return data;
+      })
+    );
+    setItems(result);
+  }, [id]);
 
   useEffect(() => {
-    const init = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:5000/books/getBook");
-        setItems(data);
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    init();
-  }, []);
+    handleGetData();
+  }, [handleGetData]);
+
+  const removeClick = (id: number) => {
+    const oldCart = JSON.parse(localStorage.getItem("title") || "[]");
+
+    const isOldId = oldCart.find((p: number) => p === id);
+
+    if (isOldId) {
+      const filteredData = oldCart.filter((p: number) => p !== id);
+      localStorage.setItem("id", JSON.stringify(filteredData));
+      return;
+    }
+  };
 
   return (
     <div>
-      <h1>Cart</h1>
+      <Navbar />
       <div className="Cart_main">
         {items.map((pro) => {
           return (
@@ -35,13 +58,12 @@ const Cart: React.FC = () => {
                 <div className="Cart_contant">
                   <img src={pro.image} alt="" />
                   <h2>{pro.title}</h2>
-                  <h4>&#8377; {pro.price}</h4>
+                  <h4>&#8377; {pro.price}.00</h4>
                   <div className="btns">
-                    <div className="like_btn">
-                      <button>Like</button>
-                    </div>
                     <div className="delete_btn">
-                      <button>Delete</button>
+                      <button onClick={() => removeClick(pro._id)}>
+                        Remove to cart
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -50,6 +72,7 @@ const Cart: React.FC = () => {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 };

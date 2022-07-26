@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #603601;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.footer_head {
+  background: -webkit-gradient(linear, left top, left bottom, from(#603601), to(#361500));
+  background: linear-gradient(#603601, #361500);
+}
+
+.footer_head .footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  padding-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .footer_head .footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.footer_head .footer .footer_contant {
+  margin-left: 20px;
+}
+
+.footer_head .footer .footer_contant img {
+  width: 80px;
+}
+
+.footer_head .footer .footer_contant h2 {
+  color: #f1ca90;
+  font-size: 50px;
+}
+
+.footer_head .footer .footer_contant h5 {
+  font-size: 10px;
+}
+
+.footer_head .footer .footer_contant p {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #daad6b;
+}
+
+.footer_head .footer .footerHead h2 {
+  font-size: 25px;
+  color: #e4c888;
+  margin: 10px 0px 8px 20px;
+}
+
+.footer_head .footer .footerHead p {
+  font-size: 17px;
+  color: #daad6b;
+  margin-left: 20px;
+}
+
+.footer_head .Social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.Social .faceBook {
+  color: #ca955c;
+}
+
+.Social .faceBook:hover {
+  color: #a3450a;
+}
+
+.Social .youtube {
+  color: #ca955c;
+}
+
+.Social .youtube:hover {
+  color: #a3450a;
+}
+
+.Social .twitter {
+  color: #ca955c;
+}
+
+.Social .twitter:hover {
+  color: #a3450a;
+}
+
+.Social .dribble {
+  color: #ca955c;
+}
+
+.Social .dribble:hover {
+  color: #a3450a;
+}
+
+.Social .tumblr {
+  color: #ca955c;
+}
+
+.Social .tumblr:hover {
+  color: #a3450a;
+}
+
+.Social .socialMedia {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.footer_end {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  background: #b1833f;
+  padding: 6px;
+  color: #301403;
+}
+
+.footer_end p {
+  font-size: 15px;
+  font-weight: 600;
+}
+/*# sourceMappingURL=Footer.css.map */

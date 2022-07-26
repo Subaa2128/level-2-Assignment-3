@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import header1 from "../assets/images/book_header_1.jpg";
 import header2 from "../assets/images/book_header_2.jpg";
 import header3 from "../assets/images/book_header_3.jpg";
@@ -31,6 +32,31 @@ import trending15 from "../assets/images/book_rending_15.jpg";
 import trending16 from "../assets/images/book_rending_16.jpg";
 import trending17 from "../assets/images/book_rending_17.jpg";
 import trending18 from "../assets/images/book_rending_18.jpg";
+import fiction1 from "../assets/images/fiction_img_1.png";
+import fiction2 from "../assets/images/fiction_img_2.png";
+import fiction3 from "../assets/images/fiction_img_3.png";
+import fiction4 from "../assets/images/fiction_img_4.png";
+import steadman1 from "../assets/images/a.f_Steadman_1.jpg";
+import rowling2 from "../assets/images/j.k_Rowling_img_2.jpg";
+import markuszusak3 from "../assets/images/markus_zusak_3.jpg";
+import niyatee4 from "../assets/images/Niyatee_parikh_sharma_4.png";
+import james5 from "../assets/images/James_berry.png";
+import zetta6 from "../assets/images/zetta_elliott.jpg";
+import lisa7 from "../assets/images/lisa_7.png";
+import pierre8 from "../assets/images/pierre_8.jpg";
+import ellen9 from "../assets/images/ellen_9.jpg";
+import william10 from "../assets/images/william_10.jpg";
+import bruce11 from "../assets/images/bruce_11.jpg";
+import sia12 from "../assets/images/sia_12.jpg";
+import frontImg1 from "../assets/images/front_img_1.png";
+import frontImg2 from "../assets/images/front_img_2.png";
+import frontImg3 from "../assets/images/front_img_3.jpg";
+import frontImg4 from "../assets/images/front_img_4.jpg";
+import frontImg5 from "../assets/images/front_img_5.png";
+import frontImg6 from "../assets/images/front_img_6.jpg";
+import frontImg7 from "../assets/images/front_img_7.png";
+import frontImg8 from "../assets/images/front_img_8.jpg";
+import frontImg9 from "../assets/images/front_img_9.jpg";
 
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineRead } from "react-icons/ai";
@@ -54,17 +80,49 @@ interface Store {
 const Home: React.FC = () => {
   const [items, setItems] = useState<Store[]>([]);
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 880,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
   };
 
   const silder = {
     slidesToShow: 2,
-    dots: true,
     autoplay: true,
     speed: 500,
   };
@@ -73,21 +131,155 @@ const Home: React.FC = () => {
     slidesToShow: 9,
     slidesToScroll: 1,
     autoplay: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+
+      {
+        breakpoint: 440,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
   };
 
   const trendingSlider = {
-    dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
     slidesToShow: 6,
     slidesToScroll: 6,
   };
+  const author = {
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    slidesToShow: 8,
+    slidesToScroll: 8,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1055,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 835,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 470,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 345,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
+  };
+
+  const frontImg = {
+    slidesToShow: 7,
+    autoplay: true,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 965,
+        settings: {
+          slidesToShow: 5,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 4,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 1,
+          infinite: true,
+        },
+      },
+    ],
+  };
 
   useEffect(() => {
     const init = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/books/getBook");
+        const { data } = await axios.get("http://localhost:5000/books/");
         setItems(data);
         console.log(data);
       } catch (error) {
@@ -105,6 +297,10 @@ const Home: React.FC = () => {
         <img className="slide_2" src={header2} alt="" />
         <img className="slide_3" src={header3} alt="" />
         <img className="slide_4" src={header4} alt="" />
+      </div>
+
+      <div className="iconHead">
+        <h2>Choose Your Own Interest</h2>
       </div>
 
       <div className="bIcon">
@@ -244,7 +440,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="homeBooks">
-        <h2>All Time Favourite</h2>
+        <h1>All Time Favourite</h1>
         <Slider {...settings}>
           {items.map((pro) => {
             return (
@@ -254,10 +450,6 @@ const Home: React.FC = () => {
                     <div>
                       <img src={pro.image} alt="" />
                       <h2>{pro.title}</h2>
-                      <h4>&#8377; {pro.price}</h4>
-                      <div className="card_btn">
-                        <button>Add To Cart</button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -265,6 +457,130 @@ const Home: React.FC = () => {
             );
           })}
         </Slider>
+      </div>
+
+      <div className="categories">
+        <h2>Top Ten Categories</h2>
+      </div>
+
+      <div className="fiction_img">
+        <img src={fiction1} alt="" />
+        <img src={fiction2} alt="" />
+        <img src={fiction3} alt="" />
+        <img src={fiction4} alt="" />
+      </div>
+
+      <div className="headingTwo">
+        <h2>New Arrival</h2>
+      </div>
+
+      <div className="front_img">
+        <Slider {...frontImg}>
+          <div className="box">
+            <img src={frontImg1} alt="" />
+            <p>The Silence (Movie Tie in edition)</p>
+            <h5>&#8377; 179.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg2} alt="" />
+            <p>Alita: Battle Angel The official Movie</p>
+            <h5>&#8377; 266.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg3} alt="" />
+            <p>Secret Garden: The Story of the Movie</p>
+            <h5>&#8377; 199.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg4} alt="" />
+            <p>The French Road Movie</p>
+            <h5>&#8377; 263.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg5} alt="" />
+            <p>Bloodshot-The official Movie</p>
+            <h5>&#8377; 399.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg6} alt="" />
+            <p>The Movie Version</p>
+            <h5>&#8377; 250.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg7} alt="" />
+            <p>Gemini Man-The official Movie</p>
+            <h5>&#8377; 105.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg8} alt="" />
+            <p>Refugee Women In Ritwik Ghatak Movies</p>
+            <h5>&#8377; 620.00</h5>
+          </div>
+          <div className="box">
+            <img src={frontImg9} alt="" />
+            <p>How To train you Dragon</p>
+            <h5>&#8377; 679.00</h5>
+          </div>
+        </Slider>
+      </div>
+
+      <div className="author_heading">
+        <h2>Featured Author</h2>
+        <div className="author_images">
+          <Slider {...author}>
+            <div>
+              <img src={steadman1} alt="" />
+              <p>J.K Rowling</p>
+            </div>
+            <div>
+              <img src={rowling2} alt="" />
+              <p>A.F Steadman</p>
+            </div>
+            <div>
+              <img src={markuszusak3} alt="" />
+              <p>Markus Zusak</p>
+            </div>
+            <div>
+              <img src={niyatee4} alt="" />
+              <p>Niyatee Sharma</p>
+            </div>
+            <div>
+              <img src={james5} alt="" />
+              <p>James Berry</p>
+            </div>
+            <div>
+              <img src={zetta6} alt="" />
+              <p>Zetta Elliott</p>
+            </div>
+            <div>
+              <img src={lisa7} alt="" />
+              <p>Lisa Maxwell</p>
+            </div>
+            <div>
+              <img src={pierre8} alt="" />
+              <p>Pierre Vanhove</p>
+            </div>
+            <div>
+              <img src={ellen9} alt="" />
+              <p>Ellen Byron</p>
+            </div>
+            <div>
+              <img src={william10} alt="" />
+              <p>William Joseph</p>
+            </div>
+            <div>
+              <img src={bruce11} alt="" />
+              <p>Bruce Coville</p>
+            </div>
+            <div>
+              <img src={sia12} alt="" />
+              <p>Sia Gupta</p>
+            </div>
+          </Slider>
+        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

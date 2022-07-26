@@ -6,4 +6,9 @@ declare module "*.jpg" {
   const value: any;
   export default value;
 }
+declare module "*.jpeg" {
+  const value: any;
+  export default value;
+}
 declare module "react-slick";
+declare module "lodash";

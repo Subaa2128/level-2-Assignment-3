@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.content {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #603601;
+  font-weight: 800;
+  font-size: 40px;
+}
+.footer_head {
+  background: linear-gradient(#603601, #361500);
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 40px;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .footer_contant {
+      margin-left: 20px;
+
+      img {
+        width: 80px;
+      }
+      h2 {
+        color: #f1ca90;
+        font-size: 50px;
+      }
+      h5 {
+        font-size: 10px;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 15px;
+        color: #daad6b;
+      }
+    }
+    .footerHead {
+      h2 {
+        font-size: 25px;
+        color: #e4c888;
+        margin: 10px 0px 8px 20px;
+      }
+      p {
+        font-size: 17px;
+        color: #daad6b;
+        margin-left: 20px;
+      }
+    }
+  }
+  .Social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.Social {
+  .faceBook {
+    color: #ca955c;
+    &:hover {
+      color: #a3450a;
+    }
+  }
+  .youtube {
+    color: #ca955c;
+    &:hover {
+      color: #a3450a;
+    }
+  }
+  .twitter {
+    color: #ca955c;
+    &:hover {
+      color: #a3450a;
+    }
+  }
+  .dribble {
+    color: #ca955c;
+    &:hover {
+      color: #a3450a;
+    }
+  }
+  .tumblr {
+    color: #ca955c;
+    &:hover {
+      color: #a3450a;
+    }
+  }
+  .socialMedia {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+.footer_end {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  background: #b1833f;
+  padding: 6px;
+  color: #301403;
+  p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}

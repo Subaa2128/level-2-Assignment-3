@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import HeadImg from "../assets/images/Head_img_1.png";
+import headImg from "../assets/images/headImg.png";
+import "../styles/BookDetails.css";
 
 const EditBook: React.FC = () => {
   const { id } = useParams();
@@ -16,9 +20,7 @@ const EditBook: React.FC = () => {
   useEffect(() => {
     const init = async () => {
       try {
-        const { data } = await axios.get(
-          `http://localhost:5000/books/bookGet/${id}`
-        );
+        const { data } = await axios.get(`http://localhost:5000/books/${id}`);
         setItems(data);
         console.log(data);
       } catch (error) {
@@ -30,9 +32,7 @@ const EditBook: React.FC = () => {
 
   const deleteBook = async (id: string) => {
     try {
-      const { data } = await axios.delete(
-        `http://localhost:5000/books/delete/${id}`
-      );
+      const { data } = await axios.delete(`http://localhost:5000/books/${id}`);
       const filters = items.filter((p: any) => p._id !== id);
       setItems(filters);
       console.log(data);
@@ -43,17 +43,14 @@ const EditBook: React.FC = () => {
 
   const patchBook = async (id: string) => {
     try {
-      const { data } = await axios.patch(
-        `http://localhost:5000/books/patchBook/${id}`,
-        {
-          title: titleValue,
-          description: descriptionValue,
-          price: priceValue,
-          category: categoryValue,
-          author: authorValue,
-          image: image,
-        }
-      );
+      const { data } = await axios.patch(`http://localhost:5000/books/${id}`, {
+        title: titleValue,
+        description: descriptionValue,
+        price: priceValue,
+        category: categoryValue,
+        author: authorValue,
+        image: image,
+      });
       const newItems = [...items];
       newItems.push(data);
       setItems(newItems);
@@ -77,9 +74,10 @@ const EditBook: React.FC = () => {
   };
   return (
     <div>
-      Edit<Link to="/Books">Books</Link>
-      <h1>EditBook</h1>
-      <div>
+      <Navbar />
+      <h1 className="heading">Edit Book</h1>
+
+      <div className="createBook">
         <input
           type="text"
           value={titleValue}
@@ -111,7 +109,7 @@ const EditBook: React.FC = () => {
           onChange={(e) => setAuthorValue(e.target.value)}
         />
       </div>
-      <div>
+      <div className="createFile">
         <input
           type="file"
           value={image}
@@ -121,16 +119,23 @@ const EditBook: React.FC = () => {
       </div>
       <div>
         <h2>{items.title}</h2>
+
         <img src={items.image} alt="" />
+
         <h4>{items.price}</h4>
         <p>{items.description}</p>
         <h5>{items.category}</h5>
         <h3>{items.author}</h3>
-        <div>
+        <div className="editBtn">
           <button onClick={() => deleteBook(items._id)}>Delete</button>
           <button onClick={() => patchBook(items._id)}>Update</button>
         </div>
       </div>
+      <div className="createImg">
+        <img src={HeadImg} alt="" />
+        <img src={headImg} alt="" />
+      </div>
+      <Footer />
     </div>
   );
 };

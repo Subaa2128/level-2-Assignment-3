@@ -1,6 +1,10 @@
 import axios from "axios";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import HeadImg from "../assets/images/Head_img_1.png";
+import headImg from "../assets/images/headImg.png";
+import "../styles/BookDetails.css";
 
 interface Store {
   _id: string;
@@ -22,7 +26,7 @@ const CreateBook: React.FC = () => {
   useEffect(() => {
     const init = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/books/getBook");
+        const { data } = await axios.get("http://localhost:5000/books/");
         setItems(data);
         console.log(data);
       } catch (error) {
@@ -34,17 +38,14 @@ const CreateBook: React.FC = () => {
 
   const createPost = async () => {
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/books/CreateBook",
-        {
-          title: titleValue,
-          description: descriptionValue,
-          price: priceValue,
-          category: categoryValue,
-          author: authorValue,
-          image,
-        }
-      );
+      const { data } = await axios.post("http://localhost:5000/books/", {
+        title: titleValue,
+        description: descriptionValue,
+        price: priceValue,
+        category: categoryValue,
+        author: authorValue,
+        image,
+      });
       console.log(data);
       const newItems = [...items];
       newItems.push(data);
@@ -68,15 +69,16 @@ const CreateBook: React.FC = () => {
   };
   return (
     <div>
-      CreateBook<Link to="/EditPage/:id">EditPage</Link>
-      <h1>CreateBook</h1>
-      <div>
+      <Navbar />
+      <h1 className="heading">Create Book</h1>
+      <div className="createBook">
         <input
           type="text"
           value={titleValue}
           placeholder="Title"
           onChange={(e) => setTitleValue(e.target.value)}
         />
+        <br />
         <input
           type="text"
           value={descriptionValue}
@@ -102,10 +104,17 @@ const CreateBook: React.FC = () => {
           onChange={(e) => setAuthorValue(e.target.value)}
         />
       </div>
-      <div>
+      <div className="createFile">
         <input type="file" onChange={handleChange} accept=".png,.jpeg,.jpg" />
       </div>
-      <button onClick={() => createPost()}>Create</button>
+      <div className="createBtn">
+        <button onClick={() => createPost()}>Create</button>
+      </div>
+      <div className="createImg">
+        <img src={HeadImg} alt="" />
+        <img src={headImg} alt="" />
+      </div>
+      <Footer />
     </div>
   );
 };

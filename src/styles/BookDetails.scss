@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500&family=Exo:wght@300;400&family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bookDetails_head {
+  h2 {
+    text-align: center;
+    margin-top: 35px;
+    font-family: "Philosopher", sans-serif;
+    font-size: 30px;
+    color: #603601;
+    @media (max-width: 350px) {
+      font-size: 25px;
+    }
+  }
+}
+.bookDetails {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  @media (max-width: 680px) {
+    display: block;
+  }
+  @media (max-width: 350px) {
+    padding: 20px;
+  }
+  img {
+    width: 50%;
+    margin-left: 50px;
+    @media (max-width: 1295px) {
+      height: 340px;
+    }
+    @media (max-width: 1220px) {
+      width: 60%;
+      height: 300px;
+    }
+    @media (max-width: 1090px) {
+      width: 100%;
+      height: 300px;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+      height: 250px;
+    }
+    @media (max-width: 785px) {
+      width: 180%;
+      height: 300px;
+      margin-left: 0px;
+    }
+    @media (max-width: 680px) {
+      width: 60%;
+      height: 400px;
+      margin-left: 110px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 565px) {
+      height: 350px;
+      margin-left: 80px;
+    }
+    @media (max-width: 450px) {
+      height: 270px;
+      margin-left: 80px;
+    }
+    @media (max-width: 400px) {
+      width: 60%;
+      height: 270px;
+      margin-left: 50px;
+    }
+    @media (max-width: 360px) {
+      width: 60%;
+      height: 240px;
+      margin-left: 50px;
+    }
+    @media (max-width: 350px) {
+      margin-left: 63px;
+    }
+  }
+
+  .details {
+    p {
+      margin-top: 10px;
+      // max-width: 80%;
+      font-size: 20px;
+      font-family: "Cairo", sans-serif;
+      color: #603601;
+      @media (max-width: 785px) {
+        margin-top: -10px;
+      }
+    }
+    h5 {
+      margin-top: 15px;
+      font-size: 20px;
+      font-family: "Exo", sans-serif;
+      color: #603601;
+      @media (max-width: 680px) {
+        text-align: center;
+      }
+    }
+    h4 {
+      margin-top: 20px;
+      font-size: 32px;
+      font-family: "Philosopher", sans-serif;
+      color: #ae7c31;
+      @media (max-width: 680px) {
+        text-align: center;
+      }
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 22px;
+      font-family: "Philosopher", sans-serif;
+      color: #603601;
+      @media (max-width: 680px) {
+        text-align: center;
+      }
+    }
+    .bookDetails_btn {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      @media (max-width: 680px) {
+        margin-left: 160px;
+      }
+      @media (max-width: 600px) {
+        margin-left: 110px;
+      }
+      @media (max-width: 500px) {
+        margin-left: 60px;
+      }
+      @media (max-width: 400px) {
+        margin-left: 20px;
+      }
+      @media (max-width: 360px) {
+        margin-left: 45px;
+      }
+      @media (max-width: 330px) {
+        margin-left: 30px;
+      }
+      .cart {
+        display: flex;
+        button {
+          padding: 10px 40px;
+          cursor: pointer;
+          background: #603601;
+          border: 4px solid #cc9544;
+          color: #ffe6ab;
+          @media (max-width: 360px) {
+            padding: 5px 10px;
+          }
+          &:hover {
+            background: #ae7c31;
+            border: 4px solid #603601;
+            color: #000;
+          }
+        }
+      }
+      .buyNow {
+        display: flex;
+        position: relative;
+
+        button {
+          padding: 10px 40px;
+          outline: none;
+          background: #603601;
+          color: #fff1ce;
+          border: 4px solid #cc9544;
+          cursor: pointer;
+          @media (max-width: 360px) {
+            padding: 5px 10px;
+          }
+
+          &:hover {
+            background: #ae7c31;
+            border: 4px solid #603601;
+            color: #000;
+          }
+          .buy {
+            position: absolute;
+
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//CreateBook
+
+.heading {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 25px;
+  color: #603601;
+  font-family: "Philosopher", sans-serif;
+  text-decoration: underline;
+}
+
+.createBook {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  input {
+    border-radius: 10px;
+    border: 1px solid #603601;
+    padding: 5px 10px;
+    outline: none;
+    color: #603601;
+  }
+}
+.createFile {
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 240px;
+  @media (max-width: 630px) {
+    margin-left: 180px;
+  }
+  @media (max-width: 535px) {
+    margin-left: 140px;
+  }
+  @media (max-width: 470px) {
+    margin-left: 80px;
+  }
+  @media (max-width: 350px) {
+    margin-left: 40px;
+  }
+  input {
+    color: #603601;
+    font-family: "Exo", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.createBtn {
+  text-align: center;
+  button {
+    background: #603601;
+    color: #ffe6ab;
+    border: 4px solid #ae7c31;
+    font-family: "Philosopher", sans-serif;
+    padding: 4px 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+}
+.createImg {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  padding: 30px;
+  img {
+    width: 40%;
+    border: 5px solid #603601;
+  }
+}
+.editBtn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+  button {
+    background: #603601;
+    padding: 5px 25px;
+    color: #ffe6ab;
+    border: 4px solid #ae7c31;
+    margin-bottom: 30px;
+    font-family: "Philosopher", sans-serif;
+  }
+}
