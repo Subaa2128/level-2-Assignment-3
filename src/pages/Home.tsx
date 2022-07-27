@@ -1,5 +1,6 @@
 import "../styles/Home.css";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -447,10 +448,12 @@ const Home: React.FC = () => {
               <div>
                 <div key={pro._id}>
                   <div className="homeBook_slider">
-                    <div>
-                      <img src={pro.image} alt="" />
-                      <h2>{pro.title}</h2>
-                    </div>
+                    <Link to="/Books">
+                      <div>
+                        <img src={pro.image} alt="" />
+                        <h2>{pro.title}</h2>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -477,49 +480,67 @@ const Home: React.FC = () => {
       <div className="front_img">
         <Slider {...frontImg}>
           <div className="box">
-            <img src={frontImg1} alt="" />
-            <p>The Silence (Movie Tie in edition)</p>
-            <h5>&#8377; 179.00</h5>
+            <Link to="/Books">
+              <img src={frontImg1} alt="" />
+              <p>The Silence (Movie Tie in edition)</p>
+              <h5>&#8377; 179.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg2} alt="" />
-            <p>Alita: Battle Angel The official Movie</p>
-            <h5>&#8377; 266.00</h5>
+            <Link to="/Books">
+              <img src={frontImg2} alt="" />
+              <p>Alita: Battle Angel The official Movie</p>
+              <h5>&#8377; 266.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg3} alt="" />
-            <p>Secret Garden: The Story of the Movie</p>
-            <h5>&#8377; 199.00</h5>
+            <Link to="/Books">
+              <img src={frontImg3} alt="" />
+              <p>Secret Garden: The Story of the Movie</p>
+              <h5>&#8377; 199.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg4} alt="" />
-            <p>The French Road Movie</p>
-            <h5>&#8377; 263.00</h5>
+            <Link to="/Books">
+              <img src={frontImg4} alt="" />
+              <p>The French Road Movie</p>
+              <h5>&#8377; 263.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg5} alt="" />
-            <p>Bloodshot-The official Movie</p>
-            <h5>&#8377; 399.00</h5>
+            <Link to="/Books">
+              <img src={frontImg5} alt="" />
+              <p>Bloodshot-The official Movie</p>
+              <h5>&#8377; 399.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg6} alt="" />
-            <p>The Movie Version</p>
-            <h5>&#8377; 250.00</h5>
+            <Link to="/Books">
+              <img src={frontImg6} alt="" />
+              <p>The Movie Version</p>
+              <h5>&#8377; 250.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg7} alt="" />
-            <p>Gemini Man-The official Movie</p>
-            <h5>&#8377; 105.00</h5>
+            <Link to="/Books">
+              <img src={frontImg7} alt="" />
+              <p>Gemini Man-The official Movie</p>
+              <h5>&#8377; 105.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg8} alt="" />
-            <p>Refugee Women In Ritwik Ghatak Movies</p>
-            <h5>&#8377; 620.00</h5>
+            <Link to="/Books">
+              <img src={frontImg8} alt="" />
+              <p>Refugee Women In Ritwik Ghatak Movies</p>
+              <h5>&#8377; 620.00</h5>
+            </Link>
           </div>
           <div className="box">
-            <img src={frontImg9} alt="" />
-            <p>How To train you Dragon</p>
-            <h5>&#8377; 679.00</h5>
+            <Link to="/Books">
+              <img src={frontImg9} alt="" />
+              <p>How To train you Dragon</p>
+              <h5>&#8377; 679.00</h5>
+            </Link>
           </div>
         </Slider>
       </div>
@@ -529,52 +550,76 @@ const Home: React.FC = () => {
         <div className="author_images">
           <Slider {...author}>
             <div>
-              <img src={steadman1} alt="" />
-              <p>J.K Rowling</p>
+              <Link to="/Author">
+                <img src={steadman1} alt="" />
+                <p>J.K Rowling</p>
+              </Link>
             </div>
             <div>
-              <img src={rowling2} alt="" />
-              <p>A.F Steadman</p>
+              <Link to="/Author">
+                <img src={rowling2} alt="" />
+                <p>A.F Steadman</p>
+              </Link>
             </div>
             <div>
-              <img src={markuszusak3} alt="" />
-              <p>Markus Zusak</p>
+              <Link to="/Author">
+                <img src={markuszusak3} alt="" />
+                <p>Markus Zusak</p>
+              </Link>
             </div>
             <div>
-              <img src={niyatee4} alt="" />
-              <p>Niyatee Sharma</p>
+              <Link to="/Author">
+                <img src={niyatee4} alt="" />
+                <p>Niyatee Sharma</p>
+              </Link>
             </div>
             <div>
-              <img src={james5} alt="" />
-              <p>James Berry</p>
+              <Link to="/Author">
+                <img src={james5} alt="" />
+                <p>James Berry</p>
+              </Link>
             </div>
             <div>
-              <img src={zetta6} alt="" />
-              <p>Zetta Elliott</p>
+              <Link to="/Author">
+                <img src={zetta6} alt="" />
+                <p>Zetta Elliott</p>
+              </Link>
             </div>
             <div>
-              <img src={lisa7} alt="" />
-              <p>Lisa Maxwell</p>
+              <Link to="/Author">
+                <img src={lisa7} alt="" />
+                <p>Lisa Maxwell</p>
+              </Link>
             </div>
             <div>
-              <img src={pierre8} alt="" />
-              <p>Pierre Vanhove</p>
+              <Link to="/Author">
+                <img src={pierre8} alt="" />
+                <p>Pierre Vanhove</p>
+              </Link>
             </div>
             <div>
-              <img src={ellen9} alt="" />
-              <p>Ellen Byron</p>
+              <Link to="/Author">
+                <img src={ellen9} alt="" />
+                <p>Ellen Byron</p>
+              </Link>
             </div>
             <div>
-              <img src={william10} alt="" />
-              <p>William Joseph</p>
+              <Link to="/Author">
+                <img src={william10} alt="" />
+                <p>William Joseph</p>
+              </Link>
             </div>
             <div>
-              <img src={bruce11} alt="" />
-              <p>Bruce Coville</p>
+              <Link to="/Author">
+                <img src={bruce11} alt="" />
+                <p>Bruce Coville</p>
+              </Link>
             </div>
             <div>
-              <img src={sia12} alt="" />
-              <p>Sia Gupta</p>
+              <Link to="/Author">
+                <img src={sia12} alt="" />
+                <p>Sia Gupta</p>
+              </Link>
             </div>
           </Slider>
         </div>

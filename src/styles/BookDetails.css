@@ -395,4 +395,27 @@
   margin-bottom: 30px;
   font-family: "Philosopher", sans-serif;
 }
+
+.edit_contant {
+  text-align: center;
+}
+
+.edit_contant h2 {
+  padding: 25px;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 500;
+}
+
+.edit_contant img {
+  width: 25%;
+  height: 500px;
+}
+
+.edit_contant h4 {
+  padding: 10px;
+}
+
+.edit_contant h3 {
+  padding: 15px;
+}
 /*# sourceMappingURL=BookDetails.css.map */

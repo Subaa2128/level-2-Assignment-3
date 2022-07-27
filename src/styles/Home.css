@@ -466,6 +466,11 @@
   padding: 20px;
 }
 
+.front_img .box a {
+  color: #645f5f;
+  text-decoration: none;
+}
+
 .front_img .box img {
   margin-left: 218x;
   margin-top: 5px;
@@ -538,6 +543,15 @@
   margin-bottom: 70px;
   margin-left: 8px;
   width: 60px;
+}
+
+.homeBooks .homeBook_slider {
+  margin-left: 40px;
+}
+
+.homeBooks .homeBook_slider a {
+  color: #73777b;
+  text-decoration: none;
 }
 
 .homeBooks .homeBook_slider img {
@@ -637,6 +651,11 @@
 
 .author_heading .author_images {
   padding: 50px;
+}
+
+.author_heading .author_images a {
+  color: #603601;
+  text-decoration: none;
 }
 
 .author_heading .author_images img {

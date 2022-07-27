@@ -278,7 +278,11 @@
 
   .box {
     padding: 20px;
-    // transition: all 0.1s ease-in;
+    a {
+      color: rgb(100, 95, 95);
+      text-decoration: none;
+    }
+
     img {
       margin-left: 218x;
       margin-top: 5px;
@@ -334,6 +338,11 @@
   }
 
   .homeBook_slider {
+    margin-left: 40px;
+    a {
+      color: #73777b;
+      text-decoration: none;
+    }
     img {
       width: 190px;
       height: 250px;
@@ -407,6 +416,10 @@
   }
   .author_images {
     padding: 50px;
+    a {
+      color: #603601;
+      text-decoration: none;
+    }
     img {
       width: 120px;
       height: 120px;

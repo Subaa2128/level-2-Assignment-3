@@ -117,12 +117,12 @@ const EditBook: React.FC = () => {
           accept=".png,.jpeg,.jpg"
         />
       </div>
-      <div>
+      <div className="edit_contant">
         <h2>{items.title}</h2>
 
         <img src={items.image} alt="" />
 
-        <h4>{items.price}</h4>
+        <h4>&#8377;{items.price}.00</h4>
         <p>{items.description}</p>
         <h5>{items.category}</h5>
         <h3>{items.author}</h3>
