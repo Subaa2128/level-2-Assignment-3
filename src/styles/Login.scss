@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+   
+
+}
+
+
+.login-container{
+    margin-top: 100px;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    background-color: #EFEAE4;
+
+
+    
+
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 60px;
+        color: rgb(176, 176, 121);
+
+    }
+
+    .input-container{
+       
+
+        input{
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            height: 40px;
+            margin-top: 50px;
+            padding: 5px;
+          
+        }
+
+      
+
+
+
+    }
+
+    button{
+        outline: none;
+        background: none;
+        border: none;
+        width: 160px;
+        height: 30px;
+        background-color: rgb(176, 176, 121);
+    }
+    p{
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 5px;
+        cursor: pointer;
+
+    }
+}
+
+@media (max-width:350px){
+    .login-container{
+        .input-container{
+            input{
+                width: 300px;
+            }
+        }
+    }
+}
+@media (max-width:300px){
+    .login-container{
+        .input-container{
+            input{
+                width: 250px;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.detail-container {
+  background-color: #EFEAE4;
+}
+
+.detail-container h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  background-color: #b0b079;
+}
+
+.detail-container .left-detail-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  place-items: center;
+  height: 100vh;
+}
+
+.detail-container .left-detail-container img {
+  width: 80%;
+}
+
+.detail-container .left-detail-container .right-detail-container h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #b0b079;
+}
+
+.detail-container .left-detail-container .right-detail-container h4 {
+  font-size: 20px;
+}
+
+.detail-container .left-detail-container .right-detail-container h3 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #b0b079;
+}
+
+.detail-container .left-detail-container .right-detail-container h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-container .left-detail-container .right-detail-container h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #b0b079;
+}
+
+.detail-container .left-detail-container .right-detail-container .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.detail-container .left-detail-container .right-detail-container button {
+  outline: none;
+  background: none;
+  border: none;
+  width: 150px;
+  height: 30px;
+  background-color: #b0b079;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 650px) {
+  .detail-container .left-detail-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .detail-container .left-detail-container .right-detail-container h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 300px) {
+  .detail-container .left-detail-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .detail-container .left-detail-container .right-detail-container h2 {
+    font-size: 30px;
+  }
+  .detail-container .left-detail-container .right-detail-container .add {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=BookDetails.css.map */

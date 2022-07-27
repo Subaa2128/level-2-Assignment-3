@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.top-bar {
+    background-color: #EFEAE4;
+    display: none;
+
+    &.active{
+        display: flex;
+    }
+
+    .top-search {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 100px;
+        margin: auto;
+        border-bottom: 1px solid black;
+
+        input {
+            padding: 1em;
+            outline: none;
+            border: none;
+            background: none;
+            font-size: 16px;
+             width: 300px;
+        }
+
+    }
+
+}
+
+
+
+.header {
+
+    background-color: #EFEAE4;
+
+    .top-header {
+        width: 95%;
+        padding: 1em;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+
+        .top-header-left {
+            display: flex;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .top-header-right {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            letter-spacing: 4px;
+
+            .search {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                cursor: pointer;
+            }
+
+            .cart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                cursor: pointer;
+                
+
+                .cart-icon {
+                    font-size: 18px;
+                }
+
+                .cart-container{
+                    background-color: rgb(176, 176, 121);
+                    position: absolute;
+                    top:50px;
+                    right: -140px;
+                    width: 400px;
+                    height: 80vh;
+                    z-index: 10;
+                    display: none;
+                    &.active{
+                    display: block;
+                    overflow-y: auto;
+                }
+
+                    p{
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 10px;
+                        font-size: 18px;
+                        color: black;
+                    }
+
+                }
+            }
+            .login {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .login-icon {
+                    font-size: 17px;
+                }
+                p{
+                    color: black;
+
+                }
+            }
+
+
+        }
+    }
+
+    .bottom-header {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        padding: 2em;
+        margin: auto;
+
+        .bottom-header-left {
+            display: flex;
+            font-size: 35px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .bottom-header-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-family: 'Open Sans', sans-serif;
+
+
+            p {
+                padding-right: 20px;
+                border-right: 1px solid black;
+                letter-spacing: 4px;
+                font-size: 15px;
+                cursor: pointer;
+                color: black;
+            }
+        }
+    }
+
+}
+.book-lists{
+    color: black;
+}
+
+@media (max-width:860px){
+
+
+    .header{
+
+        .top-header{
+            width: 100%;
+
+
+
+            .top-header-right{
+                .cart{
+
+                    .cart-container{
+                        right: -100px;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        .bottom-header{
+            width: 100%;
+            padding: 10px;
+
+
+            .bottom-header-right{
+                gap: 10px;
+            }
+        }
+    }
+}
+@media (max-width:650px){
+
+    .header{
+
+        .top-header{
+            width: 100%;
+        }
+
+        .top-header-right{
+            gap: 5px;
+            letter-spacing: 2px;
+        }
+
+
+
+
+        .bottom-header{
+            width: 100%;
+            padding: 10px;
+
+            .bottom-header-left{
+                font-size: 20px;
+            }
+
+
+            .bottom-header-right{
+                gap: 3px;
+
+                p{
+                    font-size: 11px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:400px){
+    .header{
+
+        .top-header{
+            width: 100%;
+
+
+
+            .top-header-right{
+                .cart{
+
+                    .cart-container{
+                        right: -60px;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:340px){
+    .header{
+
+        .top-header{
+            width: 100%;
+
+
+
+            .top-header-right{
+                .cart{
+
+                    .cart-container{
+                        right: -3s0px;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+}

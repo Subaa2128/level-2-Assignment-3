@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,500&family=Open+Sans:wght@300&family=Playfair+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.detail-container{
+    background-color: #EFEAE4;
+    
+
+
+
+    h1{
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        letter-spacing: 5px; 
+        background-color: rgb(176, 176, 121);
+
+       } 
+
+    .left-detail-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        
+        height: 100vh;
+
+
+
+        img{
+            width:80%;
+           }
+
+
+
+           .right-detail-container{
+
+
+            h2{
+                font-size: 50px;
+                margin-bottom: 10px;
+                color: rgb(176, 176, 121);
+            }
+            h4{
+                font-size: 20px;
+            }
+
+            h3{
+                font-size: 30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: rgb(176, 176, 121);
+
+            }
+
+            h5{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            h6{
+                font-size: 20px;
+                margin-bottom: 20px;
+                color: rgb(176, 176, 121);
+
+            }
+
+            .add{
+
+                display: flex;
+                justify-content: space-around;
+            }
+
+            button{
+                outline: none;
+                background: none;
+                border: none;
+                width: 150px;
+                height: 30px;
+                background-color: rgb(176, 176, 121);
+                font-family: 'Open Sans', sans-serif;
+                font-size: 16px;
+                
+                
+            }
+
+
+
+
+           }
+
+
+
+
+
+
+    }
+
+
+   
+   
+  
+     
+}
+
+@media (max-width:650px){
+
+    .detail-container{
+
+        .left-detail-container{
+            grid-template-columns: 1fr;
+
+         
+            .right-detail-container{
+                h2{
+                    font-size: 30px;
+                }
+            }
+            
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+}
+
+@media (max-width:300px){
+
+
+
+    .detail-container{
+
+        .left-detail-container{
+            grid-template-columns: 1fr;
+
+         
+            .right-detail-container{
+                h2{
+                    font-size: 30px;
+                }
+
+                .add{
+                   flex-direction: row;
+                }
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+    
+}
+
+
+
