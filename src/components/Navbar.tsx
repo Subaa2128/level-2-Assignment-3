@@ -105,7 +105,6 @@ const Navbar = () => {
                        <Link to="/book">
                        <p>BOOKS</p>
                        </Link>
-                        
                         <p>MAGAZINES</p>
                         <Link to="/book">
                         <p>SHOP</p>

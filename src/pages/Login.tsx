@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
 import "../styles/Login.css"
+import { Link } from "react-router-dom"
 
 const CreateAccount:React.FC = () => {
 
@@ -48,8 +49,10 @@ const CreateAccount:React.FC = () => {
          
 
         <button onClick={Login}>Login</button>
-
-        <p>Don't have an account!</p>
+      <Link to="/SignUp">
+      <p>Don't have an account!</p>
+      </Link>
+       
     </div>
     </>
   )

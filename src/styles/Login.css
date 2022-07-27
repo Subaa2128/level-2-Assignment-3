@@ -63,6 +63,7 @@
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 5px;
   cursor: pointer;
+  color: black;
 }
 
 @media (max-width: 350px) {
